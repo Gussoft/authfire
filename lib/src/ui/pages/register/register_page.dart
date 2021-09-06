@@ -5,6 +5,17 @@ class RegisterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          child: Column(
+            children: <Widget>[
+
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
