@@ -1,5 +1,6 @@
+import 'package:authfire/src/ui/routes/routes.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_meedu/router.dart' as route;
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -8,19 +9,27 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: Center(
-         child: Container(
+      body: SafeArea(
+        child: SizedBox(
+          child: Container(
+            width: double.infinity,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('Login'),
+                ElevatedButton(
+                  onPressed: (){
+                    route.pushReplacementNamed(Routes.REGISTER);
+                  },
+                  child: const Text('Sign Up'),
+                ),
               ],
             ),
-         ),
-       ),
+          ),
+        ),
+      ),
     );
   }
 }
